@@ -1,0 +1,35 @@
+body
+{
+     margin:0;
+     padding:0;
+     background: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+     
+    text-align: center;
+     
+     font-family:consolas;
+
+}
+ 
+.button {
+  text-size:24px;
+  padding: 15px 25px;
+  fontalign: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h1{
+    font-size:100px;
+}

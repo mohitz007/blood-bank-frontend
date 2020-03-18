@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOOD BANK</title>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <script>
+        function display()
+        {
+            let age=document.getElementById("age").value;
+            let name=document.getElementById("name").value;
+            let bloodgroup=document.getElementById("BG").value;
+            let num=document.getElementById("telNo").value;
+            let loc=document.getElementById("Location").value;
+            if(!name || !age || !bloodgroup || !num || !loc)
+            {
+                alert("Please Fill All Required Fields");
+                return;
+            }
+            if(age<18)
+            { 
+                alert("Not eligible to donate blood");
+                document.getElementById("age").reset();
+            }else{
+            var r=confirm("Are You sure you wamt to submit");
+           if(r==true)
+            document.getElementById("fillform").reset();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>BLOOD DONATION</h1>
+    
+    <div id="container">
+         <form id="fillform">
+        <div id="namediv"class="input">NAME: <input type="text" id="name" placeholder="Enter your Name"/></div><br>
+          <div id="namediv"class="input">WEIGHT: <input type="text" id="weight" placeholder="Enter your weight"/></div>
+          <br>
+
+        <div class="input" id="agediv">AGE: <input type="text" id="age" placeholder="Enter Your Age"/></div><br>
+        <div class="input">BLOOD GROUP: <input type="text" id="BG" placeholder="Enter Your Blood Group"/></div><br>
+        <div class="input">CONTACT NUMBER: <input type="tel" id="telNo" placeholder="Enter Your Contact Number"></div><br>
+        <div class="input">ADDRESS <input type="message" id="Location" placeholder="Enter Your Address"/></div><br>
+        
+    <button class="button" id="entry" onclick="display()">Submit</button>
+    
+         </form>
+    </div>
+</body>
+</html>

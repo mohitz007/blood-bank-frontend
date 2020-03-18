@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: xx-large;
+    text-align: center;
+}
+body
+{  
+    background-image: url(https://images.unsplash.com/photo-1528459584353-5297db1a9c01?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+    background-size: cover;
+    background-attachment:fixed;
+}
+.entry
+{
+    text-align: center;
+}
+.button {
+  text-size:24px;
+  padding: 15px 25px;
+  fontalign: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOOD BANK</title>
+
+    <script>
+        function display()
+        {
+            let age=document.getElementById("age").value;
+            let name=document.getElementById("name").value;
+            let bloodgroup=document.getElementById("BG").value;
+            let num=document.getElementById("telNo").value;
+            let loc=document.getElementById("Location").value;
+            if(!name || !age || !bloodgroup || !num || !loc)
+            {
+                alert("Please Fill All Required Fields");
+                return;
+            }
+            if(age<18)
+            { 
+                alert("Not eligible to donate blood");
+                document.getElementById("age").reset();
+            }else{
+            var r=confirm("Are You sure you wamt to submit");
+           if(r==true)
+            document.getElementById("fillform").reset();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>CAPSULE SERVICE FOR REMOTE AREAS</h1>
+    
+    <div id="container">
+         <form id="fillform">
+        <div id="namediv"class="input">NAME: <input type="text" id="name" placeholder="Enter your Name"/></div><br>
+        <div class="input">CONTACT NUMBER: <input type="tel" id="telNo" placeholder="Enter Your Contact Number"></div><br>
+        <div class="input">ADDRESS <input type="message" id="Location" placeholder="Enter Your Address"/></div><br>
+        
+    <button class="button" id="entry" onclick="display()">Submit</button>
+    
+         </form>
+    </div>
+</body>
+</html>
