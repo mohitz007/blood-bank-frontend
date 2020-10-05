@@ -1,76 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-image: url(https://images.unsplash.com/photo-1570475735025-6cd1cd5c779d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
-            background-size: cover;
-        }
-        h1{
-            margin-top: 5% ;
-            text-align: center;
-        }
-        #terms{
-            font-family: "COSMO SANS MS","cursive","sans-serif";
-            font-size: 200%;
-            
-        }
-        #submit{
-            text-align: end;
-        }
-        
-.button {
-  text-size:24px;
-  padding: 15px 25px;
-  fontalign: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-.button:hover {background-color: #3e8e41}
+<html>
+    <head>
+      
+        <title>Blood Donation </title>
+        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1 class="head1">BLOOD CAPSULES</h1>
+    <br>
+    <h3 class="head2">"Tears OF a Mother Cannot Save her Child But Your BLOOD can"</h3>
+    <img src="pic2.jpg" alt="blood" class="picture">
+        <div class="container">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <h3><a href="new.html" target=_blabk> Search</a></h3>
+                        <p>Click to search the nearest blood bank if you are intrested to visit the blood bank and donate blood</p>
+                    </div>
+                </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-user" aria-hidden="true"></i> </div>
+                <div class="content">
+                <h3><a href="register.html" target=_blank>Register</a></h3>
+                <p>Click to register as a potential donor who could be accessed in case of emergency</p>
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+            </div>
+        </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+               <h3><a href="call.html" target=_blank>Call the Capsule</a></h3>
+                <p>Click call our "Special Capsule" to donate blood in your suitable locality
+                    or to access the special capsule in case of emergency</p>
 
-
-    </style>
-</head>
-<body>
-    <h1> TERMS AND CONDITION </h1>
-    <p> <div id="terms">
-        1)Your should lie in the age range of 18-65 years and weigh atleast 45kgs and a haemoglobin of atleast 12.5gm <br> <br>
-        2)You should be in sound mental and physical health. <br> <br>
-        3)The minimum time gap between two successive blood donations must be 3 months for male and 4 months for female. <br> <br>
-        4)You should be free from any disease transmissible by blood transfusion.You must not be at risk for HIV,Hepatitis B or Ç infections. <br> <br>
-    </div>
-    <form >
-        <input type="checkbox" id="check" onclick="terms_condition(this)">I have read all the terms and conditions mentioned above and I agree to it. <br>
-    </form>
-    </p>
-
-        <button class="button" id="submit" disabled onclick="location.href='grid.html'">SUBMIT</button>
-        <script>
-            //  document.getElementById("")
-        function terms_condition(t_c)
-        {
-              if(t_c.checked)
-              {
-                  document.getElementById("submit").disabled=false;
-              }
-              else{
-              document.getElementById("submit").disabled=true;
-        }
-        }
-        </script>
-</body>
-</html>
+            </div>
+        </div>
+         
+    </html>
